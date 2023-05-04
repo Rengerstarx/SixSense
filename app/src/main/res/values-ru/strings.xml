@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Доступная среда</string>
+
+    <!-- Splash screen -->
+    <string name="splash_title">Первый запуск</string>
+
+    <!-- Text -->
+    <string name="splash_tutorial_message">Добро пожаловать в приложение \'Доступная среда\'. Предлагаем Вам прослушать краткую инструкцию по работе с программой.</string>
+    <!-- Buttons -->
+    <string name="splash_tutorial_listen">ПРОСЛУШАТЬ</string>
+    <string name="splash_tutorial_skip">ПРОПУСТИТЬ</string>
+    <string name="main_instruction">ИНСТРУКЦИЯ</string>
+    <!-- Main screen -->
+    <string name="main_title">Доступная среда</string>
+    <string name="main_notification_content_title">Сканирование маячков</string>
+    <string name="main_notification_content_description">Сканирование маячков</string>
+
+    <string name="main_bluetooth_not_supported">На вашем устройстве не поддерживается Bluetooth</string>
+    <string name="main_bluetooth_le_not_supported">На вашем устройстве не поддерживается Bluetooth LE</string>
+    <string name="main_bluetooth_adapter_error">Ошибка получения Bluetooth адаптера</string>
+    <string name="main_location_permission_title">Приложению необходим доступ к местоположению</string>
+    <string name="main_location_permission_message">Пожалуйста, предоставьте доступ к местоположению, для правильной работы приложения</string>
+
+    <!-- Buttons -->
+    <string name="main_turn_on">ВКЛЮЧИТЬ</string>
+    <string name="main_turn_off">ВЫКЛЮЧИТЬ</string>
+    <string name="main_route_button">НАВИГАЦИЯ</string>
+
+    <!-- Find route screen -->
+    <string name="find_route_title">Найти маршрут</string>
+    <string name="find_route_select_country">Страна</string>
+    <string name="find_route_select_city">Город</string>
+    <string name="find_route_select_building">Локация</string>
+    <string name="find_route_select_campus">Пункт назначения</string>
+    <string name="find_route_find_route_button">Найти маршрут</string>
+
+    <!-- Route screen -->
+    <string name="route_title">Маршрут</string>
+    <string name="route_notification_title">Найденные маячки</string>
+
+
+    <string name="route_repeat_button">ПОВТОРИТЬ</string>
+    <string name="main_settings">Настройки</string>
+    <string name="setting_increase">Увеличить</string>
+    <string name="settings_decrease">УМЕНЬШИТЬ</string>
+    <string name="settings_reset">Сбросить</string>
+    <string name="settings_save">Сохранить</string>
+
+</resources>

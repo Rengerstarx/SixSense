@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Splash screen -->
+    <!-- Layout -->
+    <!-- Text -->
+    <dimen name="splash_tutorial_text_size">30sp</dimen>
+    <!-- Button -->
+    <dimen name="splash_button_margin_horizontal">10dp</dimen>
+    <dimen name="splash_button_margin_vertical">10dp</dimen>
+    <dimen name="splash_button_textSize">45sp</dimen>
+
+    <!-- Main screen -->
+    <!-- Layout -->
+    <dimen name="main_layout_margin_bottom">10dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="main_button_margin_horizontal">10dp</dimen>
+    <dimen name="main_button_margin_vertical">5dp</dimen>
+    <dimen name="main_button_textSize">45sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Find route screen -->
+    <!-- Text -->
+    <dimen name="find_route_text_size">60sp</dimen>
+    <dimen name="find_route_text_margin_horizontal">10dp</dimen>
+    <dimen name="find_route_text_margin_vertical">5dp</dimen>
+    <!-- Button -->
+    <dimen name="find_route_button_textSize">45sp</dimen>
+    <dimen name="find_route_button_margin_horizontal">5dp</dimen>
+    <dimen name="find_route_button_margin_vertical">10dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!-- Routing detail -->
+    <dimen name="routing_detail_text_size">17sp</dimen>
+    <dimen name="routing_detail_destination_text_size">14sp</dimen>
+    <dimen name="settings_button_size">50sp</dimen>
+
+
+
+    <!-- About us screen-->
+    <dimen name="about_us_heading_text_size">32sp</dimen>
+    <dimen name="about_us_default_text_size">23sp</dimen>
+
+
+</resources>

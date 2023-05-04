@@ -1,0 +1,102 @@
+<resources>
+
+    <!--Base theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- AppBar theme -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Splash screen -->
+    <!-- Text view -->
+    <style name="SplashScreen.WelcomeText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/splash_tutorial_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Button -->
+    <style name="SplashScreen.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">@dimen/splash_button_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/splash_button_margin_horizontal</item>
+        <item name="android:textSize">@dimen/splash_button_textSize</item>
+        <item name="android:layout_marginBottom">@dimen/splash_button_margin_vertical</item>
+    </style>
+
+    <!-- Main screen -->
+    <!-- Main screen button -->
+    <style name="MainScreen.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/white</item>
+        <!-- Avoid using margin_vertical -->
+        <!-- As it requires min api level 26 -->
+        <item name="android:layout_marginTop">@dimen/main_button_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/main_button_margin_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">@dimen/main_button_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/main_button_margin_horizontal</item>
+        <item name="android:textSize">@dimen/main_button_textSize</item>
+    </style>
+
+    <!-- Main screen turn on button -->
+    <style name="MainScreen.TurnOnButton" parent="MainScreen.Button">
+        <item name="android:background">@color/green</item>
+        <item name="android:text">@string/main_turn_on</item>
+    </style>
+
+    <!-- Main screen turn off button -->
+    <style name="MainScreen.TurnOffButton" parent="MainScreen.Button">
+        <item name="android:background">@color/red</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:text">@string/main_turn_off</item>
+    </style>
+
+    <!-- Find route screen -->
+    <!-- Text -->
+    <style name="FindRoute.Text" parent="Widget.AppCompat.TextView">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/find_route_text_size</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">@dimen/find_route_text_margin_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/find_route_text_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/find_route_text_margin_horizontal</item>
+    </style>
+    <style name="RoutingDetail">
+    <item name="android:textSize">@dimen/find_route_text_size</item>
+    </style>
+
+
+    <!-- Button -->
+    <style name="FindRoute.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/find_route_button_textSize</item>
+        <item name="android:layout_marginTop">@dimen/main_button_margin_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/main_button_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/main_button_margin_horizontal</item>
+    </style>
+
+    <!-- Route screen -->
+    <!-- Button -->
+    <style name="Route.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/find_route_button_textSize</item>
+        <item name="android:layout_marginTop">@dimen/main_button_margin_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/main_button_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/main_button_margin_horizontal</item>
+    </style>
+
+</resources>

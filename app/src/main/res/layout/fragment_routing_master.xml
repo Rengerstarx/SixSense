@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.routing.master.RoutingMaster">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_routing_master"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/find_route_building_selector"
+            style="@style/FindRoute.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/find_route_select_building" />
+
+        <TextView
+            android:id="@+id/find_route_campus_selector"
+            style="@style/FindRoute.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/find_route_select_campus" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/find_route_find_route_button"
+        android:layout_alignParentBottom="true"
+        style="@style/FindRoute.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/find_route_find_route_button" />
+
+    <Button
+        android:id="@+id/find_route_debug"
+        style="@style/FindRoute.Button"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/find_route_find_route_button"
+        android:layout_marginBottom="21dp"
+        android:text="Find debug" />
+
+</RelativeLayout>

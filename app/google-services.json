@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "626651373596",
+    "firebase_url": "https://accessible-environment.firebaseio.com",
+    "project_id": "accessible-environment",
+    "storage_bucket": "accessible-environment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626651373596:android:c3f33c5ff80cef469fffd9",
+        "android_client_info": {
+          "package_name": "com.sfedu.sixthsense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626651373596-qagp3bu0qpqrhu4stml0mh77h4rok4iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2L7CWIrqgcNFpBKDprgc4Cj0uua8565s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626651373596-qagp3bu0qpqrhu4stml0mh77h4rok4iq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

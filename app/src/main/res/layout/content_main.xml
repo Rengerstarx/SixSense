@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/main_instruction_button"
+        style="@style/MainScreen.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/main_instruction"
+        />
+
+    <Button
+        android:id="@+id/main_route_button"
+        style="@style/MainScreen.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/main_route_button" />
+
+    <Button
+        android:id="@+id/main_settings"
+        style="@style/SplashScreen.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/main_settings"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/main_about_us"
+        style="@style/SplashScreen.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/main_about_us"
+        android:layout_weight="1.02"
+        />
+</LinearLayout>

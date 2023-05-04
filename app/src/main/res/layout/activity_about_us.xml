@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.main.SettingsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background = "@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:src="@drawable/img_logo_sfedu"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:textSize="@dimen/about_us_heading_text_size"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_appname"/>
+        </LinearLayout>
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:background="@color/white"
+            android:textSize="@dimen/about_us_default_text_size"
+            android:autoLink="all"
+            android:text="@string/about_us_app_description"/>
+    </LinearLayout>
+
+
+</LinearLayout>
