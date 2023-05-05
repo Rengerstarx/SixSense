@@ -44,7 +44,7 @@ public class AboutUsActivity extends BaseActivity implements TextToSpeech.OnInit
                         "Москаленко Андрей Сергеевич." +
                         "Михайлова Василиса Дмитриевнна." +
                         "Елькин Дмитрий Максимович.";
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,"");
+        //tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,"");
     }
     @Override
     public void onDestroy() {
