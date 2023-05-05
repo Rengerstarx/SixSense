@@ -34,14 +34,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/about_us_appname"/>
         </LinearLayout>
-          <TextView
+
+        <TextView
+            android:id="@+id/ttss"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:background="@color/white"
-            android:textSize="@dimen/about_us_default_text_size"
             android:autoLink="all"
-            android:text="@string/about_us_app_description"/>
+            android:background="@color/white"
+            android:paddingStart="16dp"
+            android:text="@string/about_us_app_description"
+            android:textSize="@dimen/about_us_default_text_size" />
     </LinearLayout>
 
 
