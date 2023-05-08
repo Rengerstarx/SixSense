@@ -1,12 +1,6 @@
 package com.hestia.sixthsense.ui.main;
 
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
 import com.hestia.sixthsense.R;
 import com.hestia.sixthsense.data.network.ApiHelper;
 import com.hestia.sixthsense.ui.base.BaseActivity;
@@ -24,18 +18,18 @@ import java.util.Locale;
  *
  * @author Dmitry Abakumov <killerinshadow2@gmail.com>
  */
-public class AboutUsActivity extends BaseActivity implements TextToSpeech.OnInitListener{
+public class AboutUsActivity extends BaseActivity {
 
-    private TextToSpeech tts;
+    //private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        tts = new TextToSpeech(this, this);
+        //tts = new TextToSpeech(this, this);
         //speakOut();
     }
-    @Override
+    /*@Override
     public void onInit(int status){
         String text =
                 "Шестое чувство - это система навигации внутри помещений для людей с ограниченными возможностями зрения. Проект создан командой Института компьютерных технологий и информационной безопасности Южного федерального университета:" +
@@ -65,6 +59,6 @@ public class AboutUsActivity extends BaseActivity implements TextToSpeech.OnInit
                 "Михайлова Василиса Дмитриевнна." +
                 "Елькин Дмитрий Максимович.";
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,"");
-    }
+    }*/
 }
 
