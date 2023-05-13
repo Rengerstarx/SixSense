@@ -345,7 +345,6 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
             }
         }
     }
-
     /**
      * Инициализация инструкции приложения
      * Установка прослушивателя для кнопки

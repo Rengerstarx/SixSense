@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El Sexto Sentido</string>
+
+    <!-- Splash screen -->
+    <string name="splash_title">Primer lanzamiento</string>
+
+    <!-- Text -->
+    <string name="splash_tutorial_message">Bienvenido a la aplicación \' entorno Disponible\'. Le sugerimos que escuche una breve instrucción sobre cómo trabajar con el programa.</string>
+    <!-- Buttons -->
+    <string name="splash_tutorial_listen">ESCUCHAR</string>
+    <string name="splash_tutorial_skip">OMITIR</string>
+    <string name="main_instruction">INSTRUCCIONES</string>
+    <!-- Main screen -->
+    <string name="main_title">Entorno accesible</string>
+    <string name="main_notification_content_title">Escaneo de balizas</string>
+    <string name="main_notification_content_description">Escaneo de balizas</string>
+
+    <string name="main_bluetooth_not_supported">Su dispositivo no es compatible con Bluetooth</string>
+    <string name="main_bluetooth_le_not_supported">Su dispositivo no es compatible con Bluetooth LE</string>
+    <string name="main_bluetooth_adapter_error">Error al recibir el adaptador Bluetooth</string>
+    <string name="main_location_permission_title">La aplicación necesita acceso a la ubicación</string>
+    <string name="main_location_permission_message">Por favor, proporcione acceso a la ubicación, para el correcto funcionamiento de la aplicación</string>
+
+    <!-- Buttons -->
+    <string name="main_turn_on">INCLUIR</string>
+    <string name="main_turn_off">APAGAR</string>
+    <string name="main_route_button">NAVEGACIÓN</string>
+    <string name="main_about_us">SOBRE NOSOTROS</string>
+
+    <!-- Find route screen -->
+    <string name="find_route_title">Encontrar ruta</string>
+    <string name="find_route_select_country">País</string>
+    <string name="find_route_select_city">Ciudad</string>
+    <string name="find_route_select_building">Localización</string>
+    <string name="find_route_select_campus">Destino</string>
+    <string name="find_route_find_route_button">Encontrar ruta</string>
+
+    <!-- Route screen -->
+    <string name="route_title">Ruta</string>
+    <string name="route_notification_title">Balizas encontradas</string>
+
+    <string-array name="instruction_array" translatable="true">
+        <item>Estás escuchando el primer mensaje de seis. Al abrir la aplicación, accederá al menú principal, desde aquí puede escuchar estas instrucciones, ir a la navegación o escuchar información sobre los desarrolladores.</item>
+        <item>Estás escuchando el segundo mensaje de seis. Para el primer uso del sistema en cualquier objeto, se necesita una conexión a Internet, para el uso posterior, la conexión es opcional.</item>
+        <item>Estás escuchando el tercer mensaje de seis. Si abre el menú de navegación cerca del objeto equipado con nuestro sistema, en cuestión de segundos su ubicación se determinará automáticamente, como lo indicará la inscripción en el primer botón en la pantalla, a continuación, debe seleccionar el destino en el menú correspondiente, el botón para llamarlo se encuentra justo después del botón de selección de ubicación. Después de seleccionar un destino, queda por hacer clic en el botón "buscar ruta" y esperar las indicaciones de voz.</item>
+        <item>Estás escuchando el Cuarto mensaje de seis. La aplicación proporciona una función de caminata, cuando esté en el menú de selección de ruta, la aplicación le informará su ubicación.</item>
+        <item>Estás escuchando el quinto mensaje de seis. En la parte inferior de la pantalla hay un botón sobre Nosotros, en el que puede escuchar información sobre los desarrolladores, y si mantiene presionado el botón Sobre nosotros, vaya al menú de configuración</item>
+        <item>Estás escuchando el sexto mensaje de seis. Para salir de cualquier menú, utilice el botón "atrás"estándar</item>
+    </string-array>
+
+    <string name="route_repeat_button">REPETIR</string>
+    <string name="main_settings">AJUSTES</string>
+    <string name="setting_increase">AUMENTAR</string>
+    <string name="settings_decrease">REDUCIR</string>
+    <string name="settings_reset">BORRAR</string>
+    <string name="settings_save">GUARDAR</string>
+
+    <!-- About us screen -->
+    <string name="about_us_appname" translatable="false">Entorno accesible</string>
+    <string name="about_us_app_description" translatable="false">El sexto sentido es un sistema de navegación interior para personas con discapacidad Visual. El proyecto fue creado por el equipo del Instituto de tecnología informática y seguridad de la información de la Universidad Federal del sur:\n
+        \nPljonkin Anton Pavlovich.
+        \nBekezin Sergey Alexandrovich.
+        \nMoskalenko Andrey Sergeevich.
+        \nMikhailova Vasilisa Dmitrievna.
+        \nElkin Dmitry Maksimovich.
+    \n\nCorreo: pljonkin@sfedu.ru
+    \nSitio web:  feel.sfedu.ru
+    </string>
+</resources>

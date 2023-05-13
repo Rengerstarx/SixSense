@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Доступная среда</string>
+    <string name="app_name">Шестое Чувство</string>
 
     <!-- Splash screen -->
     <string name="splash_title">Первый запуск</string>
@@ -26,6 +26,7 @@
     <string name="main_turn_on">ВКЛЮЧИТЬ</string>
     <string name="main_turn_off">ВЫКЛЮЧИТЬ</string>
     <string name="main_route_button">НАВИГАЦИЯ</string>
+    <string name="main_about_us">О НАС</string>
 
     <!-- Find route screen -->
     <string name="find_route_title">Найти маршрут</string>
@@ -39,12 +40,31 @@
     <string name="route_title">Маршрут</string>
     <string name="route_notification_title">Найденные маячки</string>
 
+    <string-array name="instruction_array" translatable="true">
+        <item>Вы слушаете первое сообщение из 6.При открытии приложения вы попадаете в главное меню, от сюда вы можете прослушать эту инструкцию, перейти к навигации или послушать информацию о разработчиках. </item>
+        <item>Вы слушаете второе сообщение из 6.Для первого использования системы на любом объекте необходимо соединение с интернет, для дальнейшего использования соединение необязательно.</item>
+        <item>Вы слушаете третье сообщение из 6.Если вы откроете меню навигации недалеко от объекта, оборудованного нашей системой, то в течение нескольких секунд ваше местоположение будет автоматически определено, о чем будет свидетельствовать надпись на первой кнопке на экране, далее вам нужно выбрать пункт назначения в соответствующем меню, кнопка для его вызова располагается следом за кнопкой выбора локации. После выбора пункта назначения, остаётся нажать кнопку "найти маршрут" и ждать голосовых подсказок.</item>
+        <item>Вы слушаете четвертое сообщение из 6.В приложении предусмотрена функция прогулки, когда вы будете находиться в меню выбора маршрута, приложение будет сообщать вам ваше местоположение.</item>
+        <item>Вы слушаете пятое сообщение из 6. В низу экрана находится кнопка О нас, в которой вы можете прослушать информацию о разработчиках, а если удержите кнопку О нас то пеерейдете в меню настроек</item>
+        <item>Вы слушаете шестое сообщение из 6. Для выхода из любого меню воспользуйтесь стандартной кнопкой "назад"</item>
+    </string-array>
 
     <string name="route_repeat_button">ПОВТОРИТЬ</string>
-    <string name="main_settings">Настройки</string>
-    <string name="setting_increase">Увеличить</string>
+    <string name="main_settings">НАСТРОЙКИ</string>
+    <string name="setting_increase">УВЕЛИЧИТЬ</string>
     <string name="settings_decrease">УМЕНЬШИТЬ</string>
-    <string name="settings_reset">Сбросить</string>
-    <string name="settings_save">Сохранить</string>
+    <string name="settings_reset">СБРОСИТЬ</string>
+    <string name="settings_save">СОХРАНИТЬ</string>
 
+    <!-- About us screen -->
+    <string name="about_us_appname" translatable="false">Шестое чувство</string>
+    <string name="about_us_app_description" translatable="false">"Шестое чувство" - это система навигации внутри помещений для людей с ограниченными возможностями зрения. Проект создан командой Института компьютерных технологий и информационной безопасности Южного федерального университета:\n
+        \nПлёнкин Антон Павлович.
+        \nБекезин Сергей Александрович.
+        \nМоскаленко Андрей Сергеевич.
+        \nМихайлова Василиса Дмитриевнна.
+        \nЕлькин Дмитрий Максимович.
+    \n\nПочта: pljonkin@sfedu.ru
+    \nСайт:  feel.sfedu.ru
+    </string>
 </resources>

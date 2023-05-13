@@ -1,37 +1,36 @@
 <resources>
 
     <!-- Application -->
-    <string name="app_name">Accessible Environment</string>
+    <string name="app_name">Six Sense</string>
 
     <!-- Splash screen -->
     <string name="splash_title">First run</string>
     <!-- Text -->
-    <string name="splash_tutorial_message">Добро пожаловать в приложение \'Доступная среда\'. Предлагаем Вам прослушать краткую инструкцию по работе с программой.</string>
+    <string name="splash_tutorial_message">Welcome to the app \'Six Sense\' We invite you to listen to a brief instruction on how to work with the program.. </string>
     <!-- Buttons -->
-    <string name="splash_tutorial_listen">ПРОСЛУШАТЬ</string>
-    <string name="splash_tutorial_skip">ПРОПУСТИТЬ</string>
+    <string name="splash_tutorial_listen">LISTEN TO</string>
+    <string name="splash_tutorial_skip">MISS</string>
 
     <!-- Main screen -->
-    <string name="main_title">Accessible Environment</string>
-
+    <string name="main_title">Six Sense</string>
     <!-- Toast -->
     <string name="main_bluetooth_features_not_supported" translatable="false">Bluetooth or Bluetooth Low Energy is not supported on this device</string>
 
 
-    <string name="main_notification_content_title">Сканирование маячков</string>
-    <string name="main_notification_content_description">Сканирование маячков</string>
+    <string name="main_notification_content_title">Scanning beacons</string>
+    <string name="main_notification_content_description">Scanning beacons</string>
 
-    <string name="main_bluetooth_not_supported">На вашем устройстве не поддерживается Bluetooth</string>
-    <string name="main_bluetooth_le_not_supported">На вашем устройстве не поддерживается Bluetooth LE</string>
-    <string name="main_bluetooth_adapter_error">Ошибка получения Bluetooth адаптера</string>
-    <string name="main_location_permission_title">Приложению необходим доступ к местоположению</string>
-    <string name="main_location_permission_message">Пожалуйста, предоставьте доступ к местоположению, для правильной работы приложения</string>
+    <string name="main_bluetooth_not_supported">Bluetooth is not supported on your device</string>
+    <string name="main_bluetooth_le_not_supported">Bluetooth LE is not supported on your device</string>
+    <string name="main_bluetooth_adapter_error">Error receiving the Bluetooth adapter</string>
+    <string name="main_location_permission_title">The application needs access to the location</string>
+    <string name="main_location_permission_message">Please provide access to the location for the correct operation of the application</string>
 
     <!-- Buttons -->
-    <string name="main_turn_on">ВКЛЮЧИТЬ</string>
-    <string name="main_turn_off">ВЫКЛЮЧИТЬ</string>
-    <string name="main_route_button">НАВИГАЦИЯ</string>
-    <string name="main_instruction">ИНСТРУКЦИЯ</string>
+    <string name="main_turn_on">ON</string>
+    <string name="main_turn_off">OFF</string>
+    <string name="main_route_button">NAVIGATION</string>
+    <string name="main_instruction">INSTRUCTION</string>
 
     <!-- Find route screen -->
     <string name="find_route_title">Find route</string>
@@ -42,39 +41,38 @@
     <string name="find_route_find_route_button">Find route</string>
 
     <!-- Route screen -->
-    <string name="route_title">Маршрут</string>
-    <string name="route_notification_title">Найденные маячки</string>
+    <string name="route_title">ROUTE</string>
+    <string name="route_notification_title">FOUND BEACONS</string>
 
 
-    <string name="route_repeat_button">ПОВТОРИТЬ</string>
-    <string name="main_about_us">О Нас</string>
-    <string name="main_settings">Настройки</string>
+    <string name="route_repeat_button">REPEAT</string>
+    <string name="main_about_us">ABOUT US</string>
+    <string name="main_settings">SETTINGS</string>
 
     <!-- Settings screen -->
-    <string name="setting_increase">УВЕЛИЧИТЬ</string>
-    <string name="settings_decrease">УМЕНЬШИТЬ</string>
-    <string name="settings_reset">СБРОСИТЬ</string>
-    <string name="settings_save">Сохранить</string>
+    <string name="setting_increase">INCREASE</string>
+    <string name="settings_decrease">REDUCE</string>
+    <string name="settings_reset">THROW OFF</string>
+    <string name="settings_save">SAVE</string>
 
-    <string-array name="instruction_array">
-        <item>Вы слушаете первое сообщение из 6.При открытии приложения вы попадаете в главное меню, от сюда вы можете прослушать эту инструкцию, перейти к навигации или послушать информацию о разработчиках. </item>
-        <item>Вы слушаете второе сообщение из 6.Для первого использования системы на любом объекте необходимо соединение с интернет, для дальнейшего использования соединение необязательно.</item>
-        <item>Вы слушаете третье сообщение из 6.Если вы откроете меню навигации недалеко от объекта, оборудованного нашей системой, то в течение нескольких секунд ваше местоположение будет автоматически определено, о чем будет свидетельствовать надпись на первой кнопке на экране, далее вам нужно выбрать пункт назначения в соответствующем меню, кнопка для его вызова располагается следом за кнопкой выбора локации. После выбора пункта назначения, остаётся нажать кнопку "найти маршрут" и ждать голосовых подсказок.</item>
-        <item>Вы слушаете четвертое сообщение из 6.В приложении предусмотрена функция прогулки, когда вы будете находиться в меню выбора маршрута, приложение будет сообщать вам ваше местоположение.</item>
-        <item>Вы слушаете пятое сообщение из 6. В низу экрана находится кнопка О нас, в которой вы можете прослушать информацию о разработчиках, а если удержите кнопку О нас то пеерейдете в меню настроек</item>
-        <item>Вы слушаете шестое сообщение из 6. Для выхода из любого меню воспользуйтесь стандартной кнопкой "назад"</item>
-
+    <string-array name="instruction_array" translatable="true">
+        <item>You are listening to the first message from 6. When you open the application, you get to the main menu, from here you can listen to this instruction, go to navigation or listen to information about developers.</item>
+        <item>You are listening to the second message from 6. For the first use of the system on any object, an Internet connection is required, for further use, a connection is optional.</item>
+        <item>You are listening to the third message from 6. If you open the navigation menu near an object equipped with our system, then within a few seconds your location will be automatically determined, as evidenced by the inscription on the first button on the screen, then you need to select a destination in the corresponding menu, the button to call it is located next to the button location selection. After selecting the destination, it remains to press the "find route" button and wait for voice prompts.</item>
+        <item>You are listening to the fourth message from 6. The app has a walk function, when you are in the route selection menu, the app will tell you your location.</item>
+        <item>You are listening to the fifth message out of 6. At the bottom of the screen there is an About us button where you can listen to information about developers, and if you hold the About Us button, you will enter the settings menu</item>
+        <item>You are listening to the sixth message from 6. To exit any menu, use the standard "back" button</item>
     </string-array>
     <!-- About us screen -->
-    <string name="about_us_appname" translatable="false">Доступная среда</string>
-    <string name="about_us_app_description" translatable="false">"Шестое чувство" - это система навигации внутри помещений для людей с ограниченными возможностями зрения. Проект создан командой Института компьютерных технологий и информационной безопасности Южного федерального университета:\n
-        \nПлёнкин Антон Павлович.
-        \nБекезин Сергей Александрович.
-        \nМоскаленко Андрей Сергеевич.
-        \nМихайлова Василиса Дмитриевнна.
-        \nЕлькин Дмитрий Максимович.
-    \n\nПочта: pljonkin@sfedu.ru
-    \nСайт:  feel.sfedu.ru
+    <string name="about_us_appname" translatable="false">Six Sense</string>
+    <string name="about_us_app_description" translatable="false">The Sixth Sense is an indoor navigation system for people with visual disabilities. The project was created by the team of the Institute of Computer Technology and Information Security of the Southern Federal University:\n
+        \nPljonkin Anton Pavlovich.
+        \nBekezin Sergey Alexandrovich.
+        \nMoskalenko Andrey Sergeevich.
+        \nMikhailova Vasilisa Dmitrievna.
+        \nElkin Dmitry Maksimovich.
+    \n\nEmail: pljonkin@sfedu.ru
+    \nWebSite: feel.sfedu.ru
     </string>
 
 
