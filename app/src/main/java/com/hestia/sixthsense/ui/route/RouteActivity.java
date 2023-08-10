@@ -666,6 +666,7 @@ public class RouteActivity extends BaseActivity implements BeaconConsumer, TextT
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("System","--------------------------------------------------------------");
         InitSettings();
         setContentView(R.layout.activity_route);
         InitReferences();

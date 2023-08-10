@@ -98,5 +98,11 @@
         <item name="android:layout_marginLeft">@dimen/main_button_margin_horizontal</item>
         <item name="android:layout_marginRight">@dimen/main_button_margin_horizontal</item>
     </style>
+    <!-- AlertDialog -->
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 
 </resources>

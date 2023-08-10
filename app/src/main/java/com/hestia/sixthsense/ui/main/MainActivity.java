@@ -1,12 +1,16 @@
 package com.hestia.sixthsense.ui.main;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +21,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.crashlytics.android.Crashlytics;
 import com.hestia.sixthsense.R;
@@ -39,7 +45,7 @@ import static com.hestia.sixthsense.data.bluetooth.model.Permissions.PERMISSION_
  * @see com.hestia.sixthsense.ui.route.RouteActivity Экран "Ведение по маршруту"
  * @see SettingsActivity Экран "Настройки"
  *
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Dmitry Abakumov <killerinshadow2@gmail.com>
  */
 public class MainActivity extends BaseActivity implements TextToSpeech.OnInitListener {
 
@@ -72,12 +78,23 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
     private int instructionIndex = 0;
     private String[] instructions;
     private TextToSpeech textToSpeech;
+    private static final int PERMISSION_REQUEST_ENABLE_BLUETOOTH = 5;
+    private static final int REQUEST_BLUETOOTH_PERMISSION = 6;
+    private static final int REQUEST_CODE_LOCATION_PERMISSION = 8;
+    Context context = this; // Текущий контекст
+    Activity activity = this; // Текущая активность
+    SharedPreferences sharedPreferences;
+    boolean isFirstLaunch;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE);
+        isFirstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true);
 
         // Service button
         mInstructionButton = findViewById(R.id.main_instruction_button);
@@ -88,6 +105,7 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
         //-------------------------------------------------------------------------------------------------//
         findViewById(R.id.main_about_us).setOnTouchListener(new View.OnTouchListener() {
             long startTime = 0;
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
@@ -118,8 +136,62 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
                 startActivity(new Intent(MainActivity.this, RoutingActivity.class));
             }
         });
-        textToSpeech = new TextToSpeech(this,this);
+        textToSpeech = new TextToSpeech(this, this);
         InitBluetooth();
+        if (isFirstLaunch) {
+            OpenSettings();
+        }else{}
+    }
+
+    private void OnBLE(){
+        if (!mBluetoothAdapter.isEnabled()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle); // Use a custom theme
+            builder.setTitle("Включить Bluetooth?");
+            builder.setMessage("В данный момент Bluetooth отключен. Вы хотите включить его?");
+            builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.S)
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Пользователь выбрал "Да", выполните действия для включения Bluetooth
+                    BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+                    if (bluetoothAdapter != null) {
+                        if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT)
+                                == PackageManager.PERMISSION_GRANTED) {
+                            // Разрешение на управление Bluetooth уже предоставлено
+                            bluetoothAdapter.enable();
+                        } else {
+                            // Запрос разрешения на управление Bluetooth
+                            ActivityCompat.requestPermissions(activity,
+                                    new String[]{Manifest.permission.BLUETOOTH_CONNECT},
+                                    PERMISSION_REQUEST_ENABLE_BLUETOOTH);
+                        }
+                    }
+                }
+            });
+            builder.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Пользователь выбрал "Нет", выполните действия, если необходимо
+                    finish();
+                }
+            });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_SCAN)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Запрашиваем разрешение у пользователя
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.BLUETOOTH_SCAN},
+                    REQUEST_BLUETOOTH_PERMISSION);
+        }
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    REQUEST_CODE_LOCATION_PERMISSION);
+        }
+
     }
 
     /**
@@ -146,8 +218,7 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
          */
 //        _createForegroundService();
         BeaconManager.setDebug(AppConstants.BEACON_DEBUG_MODE);
-        if(!mAppBluetoothHelper.checkGeolocationEnabled(getApplicationContext()))
-        {
+        if (!mAppBluetoothHelper.checkGeolocationEnabled(getApplicationContext())) {
 
             // TODO open settings menu
             // Toast.makeText(getBaseContext(),"No GEO",Toast.LENGTH_LONG).show();
@@ -163,21 +234,22 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
      * Открытие окна меню настроек приложения
      * @see SettingsActivity
      */
-    private void OpenSettings(){
+    private void OpenSettings() {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivityForResult(intent,0);
+        startActivityForResult(intent, 0);
     }
 
     /**
      * Открытие окна "О нас"
      * @see AboutUsActivity
      */
-    private void OpenAboutUs(){
+    private void OpenAboutUs() {
         Intent intent = new Intent(MainActivity.this, AboutUsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivityForResult(intent,0);
+        startActivityForResult(intent, 0);
     }
+
     /**
      * Проверка функций bluetooth
      *
@@ -248,15 +320,37 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
      * @param grantResults Список предоставленных разрешений
      *
      */
+    private static final int REQUEST_ENABLE_BLUETOOTH = 5;
+
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if (requestCode == REQUEST_ENABLE_BLUETOOTH) {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Разрешение на управление Bluetooth получено, можно включить Bluetooth
+                BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+                bluetoothAdapter.enable();
+            } else {
+                // Разрешение на управление Bluetooth не предоставлено, обработайте это соответствующим образом
+            }
+        }
+        if (requestCode == REQUEST_BLUETOOTH_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            } else {}
+        }
+        if (requestCode == REQUEST_CODE_LOCATION_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+            } else {
+
+            }
+        }
         switch (requestCode) {
             // Check coarse location permission
             case PERMISSION_REQUEST_COARSE_LOCATION: {
                 int grantedCount = 0;
-                for (int result: grantResults) {
-                    grantedCount += result == PackageManager.PERMISSION_GRANTED?1:0;
+                for (int result : grantResults) {
+                    grantedCount += result == PackageManager.PERMISSION_GRANTED ? 1 : 0;
                 }
-                if(grantedCount != grantResults.length)
+                if (grantedCount != grantResults.length)
                     finish();
                 break;
             }
@@ -308,15 +402,10 @@ public class MainActivity extends BaseActivity implements TextToSpeech.OnInitLis
             toast(R.string.main_bluetooth_adapter_error, null);
             finish();
         } else {
-            //Проверьте, включен ли BT! Для этого метода требуются разрешения BT в манифесте.
-            if (!mBluetoothAdapter.isEnabled()) {
-                //Если он не включен, попросите пользователя включить его в диалоговом окне включения BT по умолчанию!
-                // Ответ BT enable будет получен в методе onActivityResult.
-                Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBluetoothIntent, PERMISSION_REQUEST_COARSE_BL);
-            }
+            OnBLE();
         }
     }
+
 
     /**
      * On activity result

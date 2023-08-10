@@ -86,7 +86,7 @@ public class AppConstants {
      * Размер буффера отсканированных маяков, по умолчанию равен 7
      */
     public static final int DISTANCE_BUFFER_SIZE = 7;
-    public static final int BROADCAST_DISTANCE_BUFFER_SIZE = 6;
+    public static final int BROADCAST_DISTANCE_BUFFER_SIZE = 12;
 
     /**
      * Стандартное значение, которым заполняется буфер маяков, когда расстояния еще не определены

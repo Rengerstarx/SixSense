@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,146 +8,166 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".ui.main.SettingsActivity">
-    <com.google.android.material.appbar.AppBarLayout
+
+    <Button
+        android:id="@+id/AplaySettings"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"/>
+        android:layout_height="match_parent"
+        android:text="Начать работу с приложением"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/debug_layout"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="visible">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#ffffff"
-            android:hint="Расстояние регистрации">
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settings_min_distance"
+            <LinearLayout
+                android:id="@+id/debug_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:inputType="numberDecimal" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:orientation="vertical"
+                android:visibility="visible">
 
-        <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#ffffff"
+                    android:hint="Расстояние регистрации">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/settings_min_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#ffffff"
+                    android:hint="Средняя дельта расстояния">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/settings_average_delta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#ffffff"
+                    android:hint="Расстояние в метр">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/settings_distance_of_one_meter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#ffffff"
+                    android:hint="Размер broadcast буфера">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/settings_default_broadcast_buffer_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:editable="false"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#ffffff"
+                    android:hint="Время опрашивание меток (мс)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/settings_default_time_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <Button
+            android:id="@+id/settings_decrease_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#ffffff"
-            android:hint="Средняя дельта расстояния">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/settings_decrease"
+            android:textSize="@dimen/settings_button_size" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settings_average_delta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/settings_buffer_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="10dp"
             android:background="#ffffff"
-            android:hint="Расстояние в метр">
+            android:editable="false"
+            android:inputType="none"
+            android:textAlignment="center"
+            android:textSize="96sp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settings_distance_of_one_meter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <Button
+            android:id="@+id/settings_increase_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#ffffff"
-            android:hint="Размер broadcast буфера">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/setting_increase"
+            android:textSize="@dimen/settings_button_size" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settings_default_broadcast_buffer_size"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:editable="false"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <Button
+            android:id="@+id/settings_button_reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#ffffff"
-            android:hint="Время опрашивание меток (мс)">
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/settings_reset"
+            android:textSize="@dimen/settings_button_size" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settings_default_time_update"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
+        <Button
+            android:id="@+id/settings_button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_save"
+            android:visibility="visible" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/settings_increase_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/white"
-        android:text="@string/setting_increase"
-        android:layout_marginBottom="10dp"
-        android:textSize="@dimen/settings_button_size"/>
 
-
-    <EditText
-        android:id="@+id/settings_buffer_size"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:textSize="96sp"
-        android:editable="false"
-        android:inputType="none"
-        android:textAlignment="center"
-        android:layout_marginBottom="10dp"/>
-
-
-    <Button
-        android:background="@color/white"
-        android:id="@+id/settings_decrease_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/settings_decrease"
-        android:layout_marginBottom="10dp"
-        android:textSize="@dimen/settings_button_size"/>
-
-    <Button
-        android:background="@color/white"
-        android:id="@+id/settings_button_reset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/settings_reset"
-        android:layout_weight="1"
-        android:textSize="@dimen/settings_button_size"/>
-
-
-    <Button
-        android:id="@+id/settings_button_save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/settings_save"
-        android:visibility="visible" />
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

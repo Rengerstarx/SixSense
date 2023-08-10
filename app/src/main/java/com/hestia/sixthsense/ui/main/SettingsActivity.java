@@ -55,12 +55,15 @@ public class SettingsActivity extends AppCompatActivity {
     private Button mButtonRestore;
     private Button mButtonIncrease;
     private Button mButtonDecrease;
+    private Button mButtonApplay;
     private float minUpdateDistance = AppConstants.MIN_UPDATE_DISTANCE;
     private int bufferSize = AppConstants.DISTANCE_BUFFER_SIZE;
     private int broadCastBufferSize = AppConstants.BROADCAST_DISTANCE_BUFFER_SIZE;
     private int distanceValue = AppConstants.DISTANCE_OF_ONE_METER;
     private float delta = AppConstants.AVERAGE_DISTANCE_DELTA;
     private int updateTime = AppConstants.UPDATE_TIME;
+    SharedPreferences sharedPreferences;
+    boolean isFirstLaunch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,8 @@ public class SettingsActivity extends AppCompatActivity {
      * Привязка View-элементов
      */
     private void InitReference() {
+        sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE);
+        isFirstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true);
         mDebugLayout = findViewById(R.id.debug_layout);
         mMinUpdateDistance = findViewById(R.id.settings_min_distance);
         mBufferSize = findViewById(R.id.settings_buffer_size);
@@ -85,6 +90,14 @@ public class SettingsActivity extends AppCompatActivity {
         mButtonDecrease = findViewById(R.id.settings_decrease_button);
         mUpdateTime = findViewById(R.id.settings_default_time_update);
         mDefaultBroadcastBufferValue = findViewById(R.id.settings_default_broadcast_buffer_size);
+        mButtonApplay = findViewById(R.id.AplaySettings);
+        if (isFirstLaunch) {
+            findViewById(R.id.AplaySettings).setVisibility(View.VISIBLE);
+            findViewById(R.id.linearLayout).setVisibility(View.GONE);
+        }else{
+            findViewById(R.id.AplaySettings).setVisibility(View.GONE);
+            findViewById(R.id.linearLayout).setVisibility(View.VISIBLE);
+        }
     }
 
     /**
@@ -102,7 +115,16 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {RestoreSettings();}
         });
-
+        mButtonApplay.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                SaveSettings();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("isFirstLaunch", false);
+                editor.apply();
+                finish();
+            }
+        });
         mButtonIncrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

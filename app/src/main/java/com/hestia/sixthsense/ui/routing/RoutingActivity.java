@@ -242,8 +242,8 @@ public class RoutingActivity extends FragmentActivity implements RoutingMaster.O
             mBeaconBroadcastListener.Stop();
         mBeaconBroadcastListener = new BeaconBroadcastListener(getApplicationContext(), broadcastCallback);
         mBeaconBroadcastListener.Start();
-        if(AppConstants.DEBUG_MODE)
-            Toast.makeText(getBaseContext(), "Инициализировано", Toast.LENGTH_LONG).show();
+        /*if(AppConstants.DEBUG_MODE)
+            Toast.makeText(getBaseContext(), "Инициализировано", Toast.LENGTH_LONG).show();*/
     }
 
     @Override

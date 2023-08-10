@@ -3,11 +3,11 @@ apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.sfedu.sixthsense"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 9
         versionName "1.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
