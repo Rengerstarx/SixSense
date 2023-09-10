@@ -628,7 +628,7 @@ public class RouteActivity extends BaseActivity implements BeaconConsumer, TextT
                         pathIndex = 1;
                         PathItem curentPath = path.get(pathIndex);
                         nextNode = path.get(++pathIndex).node.mac;
-                        textToSpeech.speak("Развернитесь и " + curentPath.getRouteText());
+                        textToSpeech.speak(curentPath.getRouteText());
                         isSpeak = false;
                     } else {
                         isSpeak = true;
