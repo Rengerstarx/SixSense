@@ -451,7 +451,7 @@ public class RouteActivity extends BaseActivity implements BeaconConsumer, TextT
                 else return "";
 
             if (!flag) {
-                outputText = "Продолжайте движение прямо";
+                outputText = "Метка не обнаруженна, поэтому подождите пока происходит обнаружение следующей метки";
                 textToSpeech.speak(outputText);
 
                 flag = !flag;
