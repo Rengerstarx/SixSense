@@ -16,7 +16,7 @@ import retrofit2.http.Query;
  *
  * @see AppApiHelper Реализация интерфейса
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public interface ApiHelper {
 

@@ -23,7 +23,7 @@ import com.hestia.sixthsense2.utils.AppConstants;
  * @see RoutingActivity Экран "Навигация"
  * @see com.hestia.sixthsense2.ui.route.RouteActivity Экран "Ведение по маршруту"
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class SettingsActivity extends AppCompatActivity {
     public static final String SETTINGS_UPDATE_TIME = "update_time";

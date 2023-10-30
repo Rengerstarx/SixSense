@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * @see BeaconResponse Сетевая модель маячка (Beacon)
  * @see NodeResponse Сетевая модель ноды (вершины графа)
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class EdgeResponse {
     @SerializedName("start")

@@ -23,7 +23,7 @@ import io.reactivex.schedulers.Schedulers;
  * @see NodeResponse Сетевая модель ноды (вершины графа)
  * @see EdgeResponse Сетевая модель ребра
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class BeaconResponse {
     @SerializedName("id")

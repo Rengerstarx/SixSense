@@ -21,7 +21,7 @@ import androidx.annotation.RequiresApi;
  * <p> технология на которой и основаны маячки, с помощью которых осуществляется навигации в приложении</p>
  *
  *
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class Permissions {
 

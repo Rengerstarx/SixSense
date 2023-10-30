@@ -18,7 +18,7 @@ import java.util.List;
  * Когда есть возможность подключиться к сети, данные кешируются и потом,
  * когда такой возможности нет данные запрашиваются не с сервера, а из кеша
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class LocationCacheHelper {
     public static final String APP_LOCATION_CACHE = "location-cache";

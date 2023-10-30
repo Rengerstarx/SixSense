@@ -8,7 +8,7 @@ import android.widget.Toast;
  * @category   UI
  * @package    Base
  * @subpackage View
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public interface MvpView {
 

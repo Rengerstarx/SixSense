@@ -21,7 +21,7 @@ import java.util.List;
  * @see EdgeResponse Сетевая модель ребра
  * @see NodeResponse Сетевая модель ноды (вершины графа)
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class GraphResponse {
     @SerializedName("id")

@@ -15,7 +15,7 @@ import com.hestia.sixthsense2.ui.routing.RoutingActivity;
  * @see com.hestia.sixthsense2.ui.route.RouteActivity Экран "Ведение по маршруту"
  * @see SettingsActivity Экран "Настройки"
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class AboutUsActivity extends BaseActivity {
 

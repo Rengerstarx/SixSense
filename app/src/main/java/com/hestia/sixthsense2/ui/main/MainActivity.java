@@ -47,7 +47,7 @@ import java.io.IOException;
  * @see com.hestia.sixthsense2.ui.route.RouteActivity Экран "Ведение по маршруту"
  * @see SettingsActivity Экран "Настройки"
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class MainActivity extends BaseActivity implements TextToSpeech.OnInitListener {
 

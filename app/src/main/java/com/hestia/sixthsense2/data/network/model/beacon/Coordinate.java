@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * (НЕ ИСПОЛЬЗУЕТСЯ)
  * Модель координат маячка (Beacon), который храниться на сервере
  *
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class Coordinate {
 

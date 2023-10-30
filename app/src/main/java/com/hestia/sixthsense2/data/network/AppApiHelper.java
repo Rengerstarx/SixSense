@@ -40,7 +40,7 @@ import static com.hestia.sixthsense2.utils.AppConstants.SERVER_LIST;
  * <p>     с помощью метода {@link #getLocations()}</p>
  * <p> -Выводятся имена полученных локаций</p>
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class AppApiHelper {
 

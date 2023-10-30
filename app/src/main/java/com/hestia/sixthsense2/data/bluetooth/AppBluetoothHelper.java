@@ -23,7 +23,7 @@ import com.hestia.sixthsense2.ui.main.MainActivity;
  * Вспомогательный класс для проверки и запроса разрешений Bluetooth
  *
  * @see Permissions
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class AppBluetoothHelper implements BluetoothHelper {
     public static final int GPS_RESOLUTION_REQUEST = 99;

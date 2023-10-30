@@ -11,7 +11,7 @@ import com.hestia.sixthsense2.data.bluetooth.model.Permissions;
  * Интерфейс, который реализуется в классе AppBluetoothHelper
  * Цель та же - проверка и запрос разришений Bluetooth
  *
- * @author     Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public interface BluetoothHelper {
 

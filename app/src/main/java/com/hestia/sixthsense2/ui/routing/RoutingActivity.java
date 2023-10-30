@@ -38,7 +38,7 @@ import java.io.IOException;
  * @see SettingsActivity Экран "Настройки"
  * @see AboutUsActivity Экран "О нас"
  *
- * @author Dmitry Abakumov <killerinshadow2@gmail.com>
+ * @author Rengerstar <vip.bekezin@mail.ru>
  */
 public class RoutingActivity extends FragmentActivity implements RoutingMaster.OnFragmentInteractionListener, RoutingDetailLocations.OnLocationFragmentInteractionListener, RoutingDetailNodes.OnNodeFragmentInteractionListener, TextToSpeech.OnInitListener {
     private FragmentManager mFragmentManager;
